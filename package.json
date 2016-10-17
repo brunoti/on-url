@@ -2,11 +2,11 @@
   "name": "base-js",
   "version": "1.0.0",
   "description": "Add some description",
-  "main": "index.js",
+  "main": "./src/on-url.js",
   "scripts": {
     "test": "nyc ava -v",
-    "browserify" : "browserify ./src/index.js -s index -o ./dist/index.js",
-    "minify": "uglifyjs ./dist/index.js -o ./dist/index.min.js",
+    "browserify": "browserify ./src/on-url.js -s onUrl -o ./dist/on-url.js",
+    "minify": "uglifyjs ./dist/on-url.js -o ./dist/on-url.min.js",
     "lint": "eslint ./src/**/*.js --fix",
     "watch:browserify": "watchify ./src/index.js -s index -o ./dist/index.js",
     "watch:test": "ava -v -w"
@@ -35,8 +35,9 @@
     ],
     "source": [
       "src/**/*"
-    ],
-    "require": [
-      "./test/helpers/browser-mock.js"
     ]
+  },
+  "dependencies": {
+    "path-to-regexp": "^1.6.0"
   }
+}
