@@ -28,7 +28,8 @@
     "simulant": "^0.2.2",
     "sinon": "^1.17.6",
     "uglifyjs": "^2.4.10",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "babel-eslint": "^7.0.0"
   },
   "ava": {
     "files": [
