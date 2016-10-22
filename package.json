@@ -9,7 +9,8 @@
     "minify": "uglifyjs ./dist/on-url.js -o ./dist/on-url.min.js",
     "lint": "eslint ./src/**/*.js --fix",
     "watch:browserify": "watchify ./src/index.js -s index -o ./dist/index.js",
-    "watch:test": "ava -v -w"
+    "watch:test": "ava -v -w",
+    "prepublish": "babel src/on-url.js -o lib/on-url.js"
   },
   "author": "Bruno Oliveira <bruno.oliveirati1@gmail.com> (https://github.com/brunoti)",
   "license": "MIT",
@@ -35,9 +36,12 @@
     ],
     "source": [
       "src/**/*"
-    ]
+    ],
+    "require": "babel-register",
+    "babel": "inherit"
   },
   "dependencies": {
+    "in_array": "^1.1.0",
     "path-to-regexp": "^1.6.0"
   }
 }
